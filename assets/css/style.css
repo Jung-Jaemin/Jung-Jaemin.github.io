@@ -36,6 +36,7 @@ a.author-bold-underline {
 # Resume
 --------------------------------------------------------------*/
 
+.section-title,
 .resume .resume-title {
   font-size: 28px;
   font-weight: 700;
@@ -204,6 +205,7 @@ body.dark-mode .btn-outline-dark:hover {
   transform: translateY(-2px);
 }
 
+body.dark-mode .section-title,
 body.dark-mode .resume .resume-title {
   color: #f0f0f0 !important;
 }
