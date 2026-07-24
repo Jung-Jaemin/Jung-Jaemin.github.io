@@ -123,102 +123,146 @@ a.author-bold-underline {
 }
 
 /*--------------------------------------------------------------
-# Dark Mode Styles
+# Dark Mode Styles (OLED black theme)
+# bg #000000 · surface #121212 · text #eaeaea · accent #6ea8fe · border #262626
 --------------------------------------------------------------*/
 body.dark-mode {
-  background: #1a252f !important;
-  color: #f0f0f0 !important;
+  background: #000000 !important;
+  color: #eaeaea !important;
 }
 
 body.dark-mode a.author,
 body.dark-mode a.author:link,
 body.dark-mode a.author:visited {
-  color: #5a7fa1 !important;
+  color: #6ea8fe !important;
 }
 
 body.dark-mode a.author:hover {
-  color: #7a9fbf !important;
+  color: #8bbaff !important;
+}
+
+/* Plain content links (e.g. advisor link in About me) */
+body.dark-mode #aboutme a:not(.btn) {
+  color: #6ea8fe !important;
+}
+
+body.dark-mode #aboutme a:not(.btn):hover {
+  color: #8bbaff !important;
+}
+
+/* Intro section: override hardcoded inline text colors */
+body.dark-mode .intro-name-kr {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .intro-affil {
+  color: #d0d0d0 !important;
 }
 
 body.dark-mode .navbar {
-  background: #2c3e50 !important;
+  background: #0a0a0a !important;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #262626;
 }
 
 body.dark-mode .navbar .nav-link,
 body.dark-mode .navbar-brand {
-  color: #f0f0f0 !important;
+  color: #eaeaea !important;
 }
 
 body.dark-mode .navbar .nav-link:hover {
-  color: #5a7fa1 !important;
+  color: #6ea8fe !important;
   transition: color 0.3s ease;
 }
 
 body.dark-mode .card {
-  background: #34495e !important;
-  color: #f0f0f0 !important;
-  border: 1px solid rgba(90, 127, 161, 0.2) !important;
+  background: #121212 !important;
+  color: #eaeaea !important;
+  border: 1px solid #262626 !important;
   transition: all 0.3s ease;
 }
 
 body.dark-mode .card:hover {
-  border-color: #5a7fa1 !important;
-  background: #3d5a80 !important;
+  border-color: #6ea8fe !important;
+  background: #1a1a1a !important;
   transform: translateY(-2px);
 }
 
 body.dark-mode .card .card-header {
-  background: #2c3e50 !important;
-  color: #f0f0f0 !important;
-  border-bottom: 1px solid rgba(90, 127, 161, 0.2) !important;
+  background: #0a0a0a !important;
+  color: #eaeaea !important;
+  border-bottom: 1px solid #262626 !important;
 }
 
 body.dark-mode .btn-outline-primary {
-  color: #5a7fa1 !important;
-  border-color: #5a7fa1 !important;
+  color: #6ea8fe !important;
+  border-color: #6ea8fe !important;
   transition: all 0.3s ease;
 }
 
 body.dark-mode .btn-outline-primary:hover {
-  background-color: #5a7fa1 !important;
-  color: #ffffff !important;
-  box-shadow: 0 8px 16px rgba(90, 127, 161, 0.3);
+  background-color: #6ea8fe !important;
+  color: #000000 !important;
+  box-shadow: 0 8px 16px rgba(110, 168, 254, 0.25);
   transform: translateY(-2px);
 }
 
 body.dark-mode hr {
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: #262626 !important;
 }
 
 body.dark-mode .btn-outline-dark {
-  color: #d4d4d4 !important;
-  border-color: #d4d4d4 !important;
+  color: #eaeaea !important;
+  border-color: #444444 !important;
   transition: all 0.3s ease;
 }
 
 body.dark-mode .btn-outline-dark:hover {
-  background-color: #5a7fa1 !important;
-  color: #ffffff !important;
-  box-shadow: 0 8px 16px rgba(90, 127, 161, 0.3);
+  background-color: #6ea8fe !important;
+  border-color: #6ea8fe !important;
+  color: #000000 !important;
+  box-shadow: 0 8px 16px rgba(110, 168, 254, 0.25);
   transform: translateY(-2px);
 }
 
 body.dark-mode .section-title,
 body.dark-mode .resume .resume-title {
-  color: #f0f0f0 !important;
+  color: #eaeaea !important;
+}
+
+/* Timeline: vertical line, dot and its ring on black */
+body.dark-mode .resume .resume-item {
+  border-left-color: #333333 !important;
+}
+
+body.dark-mode .resume .resume-item:hover {
+  border-left-color: #6ea8fe !important;
+}
+
+body.dark-mode .resume .resume-item::before {
+  background: #6ea8fe !important;
+  border-color: #000000 !important;
+  box-shadow: 0 0 0 2px #6ea8fe !important;
 }
 
 body.dark-mode .resume .resume-item h4 {
-  color: #5a7fa1 !important;
+  color: #6ea8fe !important;
 }
 
 body.dark-mode .resume .resume-item h5 {
-  background: rgba(90, 127, 161, 0.15) !important;
-  color: #b0c4de !important;
+  background: rgba(110, 168, 254, 0.12) !important;
+  color: #a9c9f0 !important;
   border-radius: 20px;
-  border: 1px solid rgba(90, 127, 161, 0.3) !important;
+  border: 1px solid rgba(110, 168, 254, 0.3) !important;
+}
+
+/* Honors & Awards list items were dark grey on light theme */
+body.dark-mode .resume .resume-item ul li {
+  color: #cccccc !important;
+}
+
+body.dark-mode .resume .resume-item ul li:hover {
+  color: #ffffff !important;
 }
 
 
