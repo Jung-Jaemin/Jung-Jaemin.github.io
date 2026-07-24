@@ -4,12 +4,14 @@
     <meta charset="utf-8">    
     <title>Jaemin Jung</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- Favicon: "JM" monogram (inline SVG, no external file) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%231a252f'/%3E%3Ctext%20x='50'%20y='54'%20font-size='46'%20font-weight='bold'%20fill='%23ffffff'%20font-family='Arial,Helvetica,sans-serif'%20text-anchor='middle'%20dominant-baseline='central'%3EJM%3C/text%3E%3C/svg%3E">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js">
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="./assets/css/style.css?v=3" rel="stylesheet">
+    <link href="./assets/css/style.css?v=4" rel="stylesheet">
 <style>
 a.author:link { color: #000000; }
 a.author:visited { color: #000000; } 
@@ -44,36 +46,34 @@ a.author {
     </nav>
 
     <!-- Page Content -->
-    <br>
-    <!-- Page Content -->
-     <!-- ======= Intro Section ======= -->
-    <section id="home">
-        <div class="container" style="padding-top: 3em; padding-bottom: 3em;">
-            <div class="row align-items-center">
-                <div class="col-sm-2 mb-4 mb-sm-0">
-                    <img alt="Member image" class="img-responsive center-block d-block mx-auto" src="./assets/profile/profile_jm.png" style="width:100%; max-width:200pt; border-radius: 50%;">
+    <div class="container profile-layout">
+        <div class="row">
+        <!-- ======= Left Sidebar ======= -->
+        <div class="col-lg-4 col-md-5 mb-4">
+            <aside class="profile-sidebar" id="home">
+                <img alt="Member image" class="profile-photo d-block mx-auto" src="./assets/profile/profile_jm.png">
+                <div class="profile-name">Jaemin Jung</div>
+                <div class="profile-affil">
+                    Ph.D. Candidate <br>
+                    <strong>Multimodal AI Lab, KAIST</strong>
                 </div>
-                <div class="col-lg-10">
-                    <div style="margin-top: 0;">
-                        <div style="font-size: 32px; font-weight: 700; margin-bottom: 8px;">
-                            Jaemin Jung
-                        </div>
-                        <div class="intro-affil" style="font-size: 16px; margin-bottom: 24px; line-height: 1.6; color: #475569;">
-                            Ph.D. Candidate <br>
-                            <strong>Multimodal AI Lab, KAIST</strong>
-                        </div>
-                        <div style="font-size: 14px; margin-bottom: 8pt; display: flex; flex-wrap: wrap; gap: 8px;">
-                            <a class="btn btn-outline-dark btn-sm" href="assets/cv/[CV]JaeminJung.pdf" target="_blank" rel="noopener noreferrer" download>📄 CV</a>
-                            <a class="btn btn-outline-dark btn-sm" href="https://scholar.google.co.kr/citations?user=W-tgkdYAAAAJ&hl=ko"><i class="fab fa-google-scholar"></i> Google Scholar</a>
-                            <a class="btn btn-outline-dark btn-sm" href="https://github.com/Jung-Jaemin"><i class="fab fa-github"></i> GitHub</a>
-                            <a class="btn btn-outline-dark btn-sm" href="https://www.linkedin.com/in/jaemin-jung-457aa91b5/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            <a class="btn btn-outline-dark btn-sm" href="mailto:jjm5811@kaist.ac.kr">✉️ Mail</a>
-                        </div>
-                    </div>
+                <div class="profile-links">
+                    <a class="btn btn-outline-dark btn-sm" href="assets/cv/[CV]JaeminJung.pdf" target="_blank" rel="noopener noreferrer" download>📄 CV</a>
+                    <a class="btn btn-outline-dark btn-sm" href="https://scholar.google.co.kr/citations?user=W-tgkdYAAAAJ&hl=ko"><i class="fab fa-google-scholar"></i> Google Scholar</a>
+                    <a class="btn btn-outline-dark btn-sm" href="https://github.com/Jung-Jaemin"><i class="fab fa-github"></i> GitHub</a>
+                    <a class="btn btn-outline-dark btn-sm" href="https://www.linkedin.com/in/jaemin-jung-457aa91b5/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a class="btn btn-outline-dark btn-sm" href="mailto:jjm5811@kaist.ac.kr">✉️ Mail</a>
                 </div>
-            </div>
+                <hr>
+                <div class="profile-contact" id="contact">
+                    <div class="contact-line"><i class="bi bi-envelope"></i> &ensp; jjm5811 (at) kaist.ac.kr</div>
+                    <div class="contact-line"><i class="bi bi-geo-alt"></i> &ensp; Room 3103, N24 (LG Innovation Hall), KAIST, Daejeon, South Korea</div>
+                </div>
+            </aside>
         </div>
-    </section>
+
+        <!-- ======= Main Content ======= -->
+        <div class="col-lg-8 col-md-7">
 
     <!-- ======= Resume Section ======= -->
     <section class="resume" id="aboutme">
@@ -314,26 +314,9 @@ a.author {
             </div>
         </div>
     </section>
-
-    <!-- ======= Contact Section ======= -->
-    <section class="resume" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="section-title">Contact</h2>
-                    <div class="text-left" style="font-size: 14px; margin-bottom:2pt">
-                        <i class="bi bi-envelope"></i> &ensp; jjm5811 (at) kaist.ac.kr
-                    </div>
-                    <div class="text-left" style="font-size: 14px; margin-bottom:2pt">
-                        <i class="bi bi-geo-alt"></i> &ensp; Room 3103, N24 (LG Innovation Hall), KAIST, Daejeon, South Korea
-                    </div>
-                    <!-- <div class="text-left" style="font-size: 14px; margin-bottom:2pt">
-                        <i class="bi bi-telephone"></i> &ensp; optional, otherwise comment out
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>
+        </div><!-- /main content col -->
+        </div><!-- /row -->
+    </div><!-- /profile-layout container -->
     
     <!-- ======= Footer Section ======= -->
     <!-- <section id="bottom">

@@ -168,18 +168,26 @@ body.dark-mode #aboutme a:not(.btn):hover {
   text-decoration-color: #6ea8fe !important;
 }
 
-/* Intro section: dark panel + override hardcoded inline text colors */
-body.dark-mode #home {
+/* Profile sidebar: dark panel + text overrides */
+body.dark-mode .profile-sidebar {
   background: #121212 !important;
 }
 
-body.dark-mode #home img {
+body.dark-mode .profile-photo {
   border-color: #262626 !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
 }
 
-body.dark-mode .intro-affil {
+body.dark-mode .profile-name {
+  color: #f5f5f5 !important;
+}
+
+body.dark-mode .profile-affil {
   color: #d0d0d0 !important;
+}
+
+body.dark-mode .profile-contact .contact-line {
+  color: #c8c8c8 !important;
 }
 
 body.dark-mode .navbar {
@@ -402,24 +410,91 @@ body.dark-mode .resume .resume-item ul li:hover {
 }
 
 /*--------------------------------------------------------------
-# Profile Section
+# Profile Sidebar (left column)
 --------------------------------------------------------------*/
 
-#home {
-  background: #f9f9f9;
-  border-radius: 20px;
-  padding: 40px 0 !important;
+.profile-layout {
+  padding-top: 90px;   /* clear the fixed navbar */
+  padding-bottom: 40px;
 }
 
-#home img {
+/* Fixed navbar offset for in-page anchor jumps */
+#aboutme,
+#pubs,
+#contact {
+  scroll-margin-top: 80px;
+}
+
+.profile-sidebar {
+  position: sticky;
+  top: 90px;
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 32px 24px;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 190px;
+  border-radius: 50%;
   border: 3px solid var(--border-light);
   box-shadow: 0 20px 40px rgba(44, 62, 80, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#home img:hover {
+.profile-photo:hover {
   transform: scale(1.05) rotate(2deg);
   box-shadow: 0 30px 60px rgba(44, 62, 80, 0.25);
+}
+
+.profile-name {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+  margin-top: 22px;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.profile-affil {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+  color: #475569;
+  margin-bottom: 22px;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-contact {
+  font-size: 13px;
+}
+
+.profile-contact .contact-line {
+  margin-bottom: 8px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* On the left column layout, the first section heading aligns with the sidebar top */
+#aboutme .section-title {
+  margin-top: 0;
+}
+
+/* Below md the columns stack; drop sticky so the sidebar doesn't overlay content */
+@media (max-width: 767.98px) {
+  .profile-sidebar {
+    position: static;
+    top: auto;
+  }
+  #aboutme .section-title {
+    margin-top: 40px;
+  }
 }
 
 /*--------------------------------------------------------------
