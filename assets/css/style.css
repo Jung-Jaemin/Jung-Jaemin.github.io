@@ -178,10 +178,6 @@ body.dark-mode #home img {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
 }
 
-body.dark-mode .intro-name-kr {
-  color: #b0b0b0 !important;
-}
-
 body.dark-mode .intro-affil {
   color: #d0d0d0 !important;
 }
