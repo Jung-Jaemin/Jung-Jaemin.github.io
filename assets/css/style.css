@@ -194,6 +194,16 @@ body.dark-mode .profile-links a:hover {
   color: #6ea8fe !important;
 }
 
+body.dark-mode .profile-interests-label {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .interest-tag {
+  background: rgba(110, 168, 254, 0.12) !important;
+  color: #a9c9f0 !important;
+  border: 1px solid rgba(110, 168, 254, 0.3) !important;
+}
+
 body.dark-mode .navbar {
   background: #0a0a0a !important;
   backdrop-filter: blur(10px);
@@ -487,6 +497,32 @@ body.dark-mode .resume .resume-item ul li:hover {
 .profile-links a:hover {
   color: var(--accent);
   transform: translateY(-2px);
+}
+
+.profile-interests {
+  margin-top: 26px;
+  text-align: center;
+}
+
+.profile-interests-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+.interest-tag {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 5px 12px;
+  margin: 4px 3px;
+  border-radius: 20px;
+  background: rgba(44, 62, 80, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(44, 62, 80, 0.15);
 }
 
 /* On the left column layout, the first section heading aligns with the sidebar top */
