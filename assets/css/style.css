@@ -131,7 +131,7 @@ a.author-bold-underline {
 /*--------------------------------------------------------------
 # About me content links (advisor link): understated academic style
 --------------------------------------------------------------*/
-#aboutme p a:not(.btn) {
+#aboutme p a:not(.btn):not(.plain-link) {
   color: inherit;
   text-decoration: underline;
   text-decoration-color: rgba(0, 0, 0, 0.28);
@@ -139,7 +139,7 @@ a.author-bold-underline {
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
-#aboutme p a:not(.btn):hover {
+#aboutme p a:not(.btn):not(.plain-link):hover {
   color: var(--accent);
   text-decoration-color: var(--accent);
 }
@@ -164,12 +164,12 @@ body.dark-mode a.author:hover {
 }
 
 /* Plain content links (e.g. advisor link in About me): body-colored + subtle underline */
-body.dark-mode #aboutme a:not(.btn) {
+body.dark-mode #aboutme a:not(.btn):not(.plain-link) {
   color: #eaeaea !important;
   text-decoration-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-body.dark-mode #aboutme a:not(.btn):hover {
+body.dark-mode #aboutme a:not(.btn):not(.plain-link):hover {
   color: #6ea8fe !important;
   text-decoration-color: #6ea8fe !important;
 }
