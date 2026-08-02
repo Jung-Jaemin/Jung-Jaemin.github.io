@@ -32,6 +32,16 @@ a.author-bold-underline {
   font-weight: bold;
 }
 
+/* Inline link that keeps the surrounding text style (color inherited, no underline) */
+.plain-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.plain-link:hover {
+  text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
